@@ -1,13 +1,12 @@
+package DisableTest;
 
+import DisableTest.SumTwoNumbers;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
-
-import static org.junit.jupiter.api.Assertions.*;
-
-@Disabled
+//@Disabled
 public class SumTwoNumbersTest {
     private SumTwoNumbers sumTwoNumbers;
 
@@ -16,6 +15,7 @@ public class SumTwoNumbersTest {
         sumTwoNumbers = new SumTwoNumbers();
     }
 
+    @Disabled
     @Test
     public void addTest() {
         Assertions.assertEquals(8, sumTwoNumbers.add(3, 5));

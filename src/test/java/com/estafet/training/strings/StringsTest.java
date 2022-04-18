@@ -1,3 +1,6 @@
+package StringToUpperCase;
+
+import StringToUpperCase.Strings;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.*;
@@ -10,27 +13,22 @@ public class StringsTest {
 
     @ParameterizedTest
     @ValueSource(strings = {"", "  "})
-    void isBlank_ShouldReturnTrueForNullOrBlankStrings(String input) {
+    void isBlankShouldReturnTrueForNullOrBlankStrings(String input) {
         Assertions.assertTrue(Strings.isBlank(input));
     }
 
 
-    //CSV file:
-//input,expected
-//test,TEST
-//tEst,TEST
-//Java,JAVA
-
-//    @ParameterizedTest
-//    @CsvFileSource(resources = "csvFile/csvFile.csv", numLinesToSkip = 1)
-//    void toUpperCase_ShouldGenerateTheExpectedUppercaseValueCSVFile(String input, String expected) {
-//        String actualValue = input.toUpperCase();
-//        assertEquals(expected, actualValue);
-//    }
+    //read from csv file
+    @ParameterizedTest
+    @CsvFileSource(resources = "/csvFile.csv", numLinesToSkip = 1)
+    void toUpperCaseShouldGenerateTheExpectedUppercaseValueCSVFile(String input, String expected) {
+        String actualValue = input.toUpperCase();
+        assertEquals(expected, actualValue);
+    }
 
     @ParameterizedTest
     @CsvSource({"test,TEST", "tEst,TEST", "Java,JAVA"})
-    void toUpperCase_ShouldGenerateTheExpectedUppercaseValue(String input, String expected) {
+    void toUpperCaseShouldGenerateTheExpectedUppercaseValue(String input, String expected) {
         String actualValue = input.toUpperCase();
         assertEquals(expected, actualValue);
     }
@@ -38,7 +36,7 @@ public class StringsTest {
     //Methods:
     @ParameterizedTest
     @MethodSource("provideStringsForIsBlank")
-    void isBlank_ShouldReturnTrueForNullOrBlankStrings(String input, boolean expected) {
+    void isBlankShouldReturnTrueForNullOrBlankStrings(String input, boolean expected) {
         assertEquals(expected, Strings.isBlank(input));
     }
 
