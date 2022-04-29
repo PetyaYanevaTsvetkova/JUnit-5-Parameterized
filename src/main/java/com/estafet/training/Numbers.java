@@ -1,4 +1,4 @@
-package isOddNumber;
+package com.estafet.training;
 
 public class Numbers {
     public static boolean isOdd(int number) {

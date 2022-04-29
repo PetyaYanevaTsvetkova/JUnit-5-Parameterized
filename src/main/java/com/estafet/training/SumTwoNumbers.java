@@ -1,4 +1,4 @@
-package DisableTest;
+package com.estafet.training;
 
 public class SumTwoNumbers {
 

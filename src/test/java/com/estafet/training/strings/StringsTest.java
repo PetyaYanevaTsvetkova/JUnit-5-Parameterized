@@ -1,6 +1,6 @@
-package StringToUpperCase;
+package com.estafet.training.strings;
 
-import StringToUpperCase.Strings;
+import com.estafet.training.Strings;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.*;

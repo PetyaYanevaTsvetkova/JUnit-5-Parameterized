@@ -1,6 +1,6 @@
-package isOddNumber;
+package com.estafet.training.oddnumbers;
 
-import isOddNumber.Numbers;
+import com.estafet.training.Numbers;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 

@@ -1,6 +1,6 @@
-package DisableTest;
+package com.estafet.training.sum;
 
-import DisableTest.SumTwoNumbers;
+import com.estafet.training.SumTwoNumbers;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Disabled;
